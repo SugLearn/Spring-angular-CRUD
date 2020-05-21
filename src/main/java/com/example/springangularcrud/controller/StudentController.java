@@ -46,7 +46,7 @@ public class StudentController {
 
     }
 
-    @PutMapping(" /{id}")
+    @PutMapping("UpdateStudent/{id}")
     public ResponseEntity<Student> updateStudent(@PathVariable(value= "id") Long StudentId,
                                                  @Valid @RequestBody Student studentdetails){
         Student student = dao.findById(StudentId).orElse(null);
